@@ -44,8 +44,8 @@ vim.keymap.set("n", "<S-Tab>", ":tabprevious<CR>", { silent = true })
 local colors = {
 	bg			= "#1a3a2e", -- dark green background
 	
-	fg			= "#E3F2EA", -- light green text
-	fg_dim		= "#B7D1C3",
+	fg			= "#e3f2ea", -- light green text
+	fg_dim		= "#b7d1c3",
 
 	green		= "#9fe3c2", -- main green
 	green_bold	= "#bdf5d8",
