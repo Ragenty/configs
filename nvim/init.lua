@@ -1,3 +1,4 @@
+
 -- ==============================================
 -- NEOVIM CONFIG
 -- ==============================================
@@ -30,51 +31,6 @@ vim.opt.smartcase = true
 
 -- Stop auto-inserting comment leader on new lines
 vim.opt.formatoptions:remove({ "r", "o" })
-
--- Auto Complete
-vim.opt.completeopt = { "menu", "menuone", "noselect" }
-
-vim.keymap.set("i", "<Tab>", function()
-	if vim.fn.pumvisible() == 1 then
-		return "<C-n>"
-	else
-		return "<Tab>"
-	end
-end, { expr = true })
-
-vim.keymap.set("i", "<S-Tab>", function()
-	if vim.fn.pumvisible() == 1 then
-		return "<C-p>"
-	else
-		return "<S-Tab>"
-	end
-end, { expr = true })
-
-vim.keymap.set("i", "<Down>", function()
-	if vim.fn.pumvisible() == 1 then
-		return "<C-n>"
-	else
-		return "<Down>"
-	end
-end, { expr = true })
-
-vim.keymap.set("i", "<Up>", function()
-	if vim.fn.pumvisible() == 1 then
-		return "<C-p>"
-	else
-		return "<Up>"
-	end
-end, { expr = true })
-
-vim.keymap.set("i", "<CR>", function()
-	if vim.fn.pumvisible() == 1 then
-		return vim.fn["complete_info"]()["selected"] ~= -1 and "<C-y>" or "<CR>"
-	else
-		return "<CR>"
-	end
-end, { expr = true })
-
-vim.opt.omnifunc = "syntaxcomplete#Complete"
 
 --===============================================
 -- COLORS AND CUSTOMIZATION
